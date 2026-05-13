@@ -1,2 +1,95 @@
 # Airbnb_DBT_Project
-In this project I created an ETL pipeline using DBT + Snowflake for a property management company.
+
+## Executive Summary
+UrbanStay Management is a short-term rental property management company operating a portfolio of properties across Airbnb, Booking.com, and Vrbo. As the business scaled, leadership struggled with fragmented operational data, inconsistent KPI reporting, and limited visibility into portfolio performance across platforms and properties.
+
+Using Snowflake, dbt, AWS S3, Airflow, Docker, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
+## Data Flow
+![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/a6725ad6a5d673be6f134c0c5019ed91dbabb54f/Images/AWS_Data_Flow.png)
+
+## Project Overview
+This project implements a cloud-native ETL pipeline using AWS to process YouTube trending and metadata datasets.
+
+Tech Stack
+- AWS S3 – Data lake (raw, processed, curated layers)
+- AWS Lambda – Event-driven ingestion & processing
+- AWS Glue – Data catalog + transformations
+- AWS Athena – Serverless querying
+- AWS Step Functions – Pipeline orchestration
+- IAM – Secure access control
+- Python (Pandas / boto3 / awswrangler) – Data processing
+- AWS CLI (PowerShell) – Data ingestion & backfill
+
+### 🏢 Business Scenario
+
+### Context
+
+A marketing client wants to understand:
+- What content performs best across regions
+- Trends in engagement (views, likes, comments)
+- Category-level performance
+- Opportunities for campaign optimisation
+
+### ❌ The Problem
+- Raw YouTube data is unstructured and fragmented
+- Manual analysis is time-consuming and not scalable
+- No automated pipeline for continuous ingestion and reporting
+
+### ✅ The Solution
+A fully automated pipeline that:
+1. Ingests raw YouTube data into S3
+2. Cleans and structures data using AWS Glue
+3. Stores curated datasets for analytics
+4. Enables querying via Athena
+5. Orchestrates workflows using Step Functions (DAG-style)
+
+### Pipeline Orchestration (Step Functions DAG)
+
+**The pipeline follows a DAG structure:**
+
+Ingestion Layer --> Processing Layer --> Storage Layer --> Analytics Layer
+
+![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
+---
+
+### 🚀 Key Features / Industry Best Practices
+
+1. Idempotent Data Ingestion
+- Uses stable ingestion IDs derived from event timestamps to prevent duplicate loads
+- Checks for existing S3 objects before writing (idempotency guard)
+- Ensures safe retries if jobs are triggered multiple times
+
+👉 Prevents duplicate data when schedulers (e.g. EventBridge) fire twice
+
+2. Resilient API Handling
+- Implements retry logic with exponential backoff for transient failures
+- Handles HTTP errors explicitly (e.g. quota exhaustion)
+- Uses persistent HTTP sessions for connection reuse
+
+👉 Ensures pipeline stability when dealing with external APIs
+
+3. Pagination & Full Data Extraction
+- Iteratively retrieves all available pages from the API
+- Avoids partial datasets caused by single-call limits
+
+👉 Guarantees completeness of ingested data
+
+4. Data Quality as a First-Class Step - Dedicated validation layer before downstream processing
+
+Includes:
+- Row count thresholds
+- Null checks on critical fields
+- Schema validation
+- Value range checks
+- Data freshness checks
+
+👉 Prevents bad data from propagating into analytics
+
+5. Observability & Monitoring
+- Structured JSON logging for queryable logs
+- CloudWatch metrics (e.g. API quota usage)
+- SNS alerts for failures
+
+👉 Enables fast debugging and proactive monitoring
+
+---

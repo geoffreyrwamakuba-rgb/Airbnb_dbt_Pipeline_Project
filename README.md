@@ -56,7 +56,6 @@ The absence of a centralised analytics platform limited the company’s ability 
 - Tableau dashboards for executive reporting and operational analysis
 
 ### Data Flow Architecture
-
 ![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/285c275578d3c41c15f85debea5728bfbe25e8ad/Data%20lineage.png)
 ---
 

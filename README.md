@@ -48,21 +48,38 @@ The absence of a centralised analytics platform limited the company’s ability 
 - Improve operational decision-making.
 
 ### ✅ The Solution
-A fully automated pipeline that:
-1. Ingests raw YouTube data into S3
-2. Cleans and structures data using AWS Glue
-3. Stores curated datasets for analytics
-4. Enables querying via Athena
-5. Orchestrates workflows using Step Functions (DAG-style)
 
-### Pipeline Orchestration (Step Functions DAG)
+- Ingestion of raw booking and operational datasets into AWS S3
+- Snowflake staging and warehouse modelling
+- Incremental dbt transformations for scalable processing
+- SCD Type 2 snapshot implementation for historical tracking
+- Tableau dashboards for executive reporting and operational analysis
 
-**The pipeline follows a DAG structure:**
-
-Ingestion Layer --> Processing Layer --> Storage Layer --> Analytics Layer
+### Data Flow Architecture
 
 ![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
 ---
+
+
+### Key Insights and Recommendations
+
+### Insight 1 – Revenue Dependence On Airbnb
+
+Analysis revealed that Airbnb generated the majority of portfolio revenue compared to Booking.com and Vrbo, exposing the business to significant platform concentration risk.
+
+Airbnb contributed approximately:
+- £7.0M revenue, compared to:
+- £2.6M from Booking.com
+- £1.0M from Vrbo
+
+This highlighted an overreliance on a single acquisition channeL
+
+### Recommendation:
+
+### Insight 2 – Instagram and TikTok are the strongest conversion drivers within Paid Social
+
+### Recommendation:
+
 
 ### 🚀 Key Features / Industry Best Practices
 

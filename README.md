@@ -57,7 +57,7 @@ The absence of a centralised analytics platform limited the company’s ability 
 
 ### Data Flow Architecture
 
-![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/Data%20lineage.png)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/285c275578d3c41c15f85debea5728bfbe25e8ad/Data%20lineage.png)
 ---
 
 ### Key Insights and Recommendations

@@ -1,4 +1,4 @@
-# Airbnb_DBT_Project
+# Airbnb DBT Project
 
 ## Executive Summary
 UrbanStay Management is a short-term rental property management company operating a portfolio of properties across Airbnb, Booking.com, and Vrbo. As the business scaled, leadership struggled with fragmented operational data, inconsistent KPI reporting, and limited visibility into portfolio performance across platforms and properties.

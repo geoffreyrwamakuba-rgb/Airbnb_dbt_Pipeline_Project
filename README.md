@@ -4,36 +4,48 @@
 UrbanStay Management is a short-term rental property management company operating a portfolio of properties across Airbnb, Booking.com, and Vrbo. As the business scaled, leadership struggled with fragmented operational data, inconsistent KPI reporting, and limited visibility into portfolio performance across platforms and properties.
 
 Using Snowflake, dbt, AWS S3, Airflow, Docker, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
-## Data Flow
+
+## Tableau Dashboard
 ![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/a6725ad6a5d673be6f134c0c5019ed91dbabb54f/Images/AWS_Data_Flow.png)
 
 ## Project Overview
-This project implements a cloud-native ETL pipeline using AWS to process YouTube trending and metadata datasets.
 
-Tech Stack
-- AWS S3 – Data lake (raw, processed, curated layers)
-- AWS Lambda – Event-driven ingestion & processing
-- AWS Glue – Data catalog + transformations
-- AWS Athena – Serverless querying
-- AWS Step Functions – Pipeline orchestration
-- IAM – Secure access control
-- Python (Pandas / boto3 / awswrangler) – Data processing
-- AWS CLI (PowerShell) – Data ingestion & backfill
+UrbanStay Management relied heavily on operational exports from multiple booking platforms to monitor business performance. Reporting processes were manual, inconsistent, and lacked standardised hospitality KPIs needed to support pricing and operational decisions.
+
+The objective of this engagement was to build a scalable analytics platform capable of:
+
+- consolidating booking and operational data from multiple platforms
+- automating transformation and reporting workflows
+- standardising hospitality KPI calculations
+- providing interactive executive dashboards for management.
 
 ### 🏢 Business Scenario
 
 ### Context
 
-A marketing client wants to understand:
-- What content performs best across regions
-- Trends in engagement (views, likes, comments)
-- Category-level performance
-- Opportunities for campaign optimisation
+The business needed visibility into questions such as:
+
+Which properties generate the highest RevPAR?
+- Are occupancy gains being driven by excessive discounting?
+- Which booking platforms drive the highest revenue?
+- How does seasonality impact occupancy and pricing performance?
+- Which properties are underperforming operationally?
 
 ### ❌ The Problem
-- Raw YouTube data is unstructured and fragmented
-- Manual analysis is time-consuming and not scalable
-- No automated pipeline for continuous ingestion and reporting
+
+Prior to implementation, UrbanStay Management faced several operational and reporting challenges:
+- Booking data was fragmented across Airbnb, Booking.com, and Vrbo
+- KPI calculations were inconsistent across teams
+- Reporting processes relied heavily on spreadsheets and manual exports
+- Leadership lacked visibility into pricing efficiency and occupancy trends
+- No historical change tracking existed for operational dimensions
+- Reporting latency made proactive pricing and operational decisions difficult.
+
+The absence of a centralised analytics platform limited the company’s ability to:
+- Optimise pricing strategies
+- Identify underperforming properties
+- Diversify booking platform dependence
+- Improve operational decision-making.
 
 ### ✅ The Solution
 A fully automated pipeline that:

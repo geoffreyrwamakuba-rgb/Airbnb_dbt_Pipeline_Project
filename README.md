@@ -71,7 +71,7 @@ Airbnb contributed approximately:
 - £2.6M from Booking.com
 - £1.0M from Vrbo
 
-This highlighted an overreliance on a single acquisition channeL
+**This highlighted an overreliance on a single acquisition channeL**
 
 ### Recommendation:
 I recommended that UrbanStay Management diversify booking acquisition strategies by:
@@ -90,46 +90,41 @@ This suggested that occupancy growth was likely being maintained through pricing
 **The increase in occupancy was insufficient to offset declining average nightly pricing.**
 
 ### Recommendation:
+I recommended implementing more sophisticated revenue management strategies including:
+- Premium weekend pricing
+- Test price elasticity by property type
+- Minimum stay requirements
+- Reduced reliance on discounting during high-demand periods.
 
+Given the consistently high occupancy rates, the data suggested there was likely room to increase ADR without materially impacting booking volumes
+
+### dbt DAG
+
+![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
+---
 
 ### 🚀 Key Features / Industry Best Practices
 
-1. Idempotent Data Ingestion
-- Uses stable ingestion IDs derived from event timestamps to prevent duplicate loads
-- Checks for existing S3 objects before writing (idempotency guard)
-- Ensures safe retries if jobs are triggered multiple times
+1. Modern Medallion Architecture
+- Implemented a Bronze → Silver → Gold warehouse design within Snowflake
+- Separated raw ingestion, cleaned transformations, and business-ready KPI marts
+- Built dedicated aggregate tables optimised for Tableau dashboard performance
 
-👉 Prevents duplicate data when schedulers (e.g. EventBridge) fire twice
+👉 Creates scalable, maintainable, and analytics-ready data models commonly used in modern data platforms
 
-2. Resilient API Handling
-- Implements retry logic with exponential backoff for transient failures
-- Handles HTTP errors explicitly (e.g. quota exhaustion)
-- Uses persistent HTTP sessions for connection reuse
+2. Incremental dbt Modelling & Historical Tracking
+- Used incremental dbt models to efficiently process new booking and operational data
+- Implemented SCD Type 2 snapshot logic for historical dimension tracking
+- Designed reusable fact and dimension models for downstream analytics
 
-👉 Ensures pipeline stability when dealing with external APIs
+👉 Reduces warehouse compute costs while preserving historical business context and enabling scalable transformations
 
-3. Pagination & Full Data Extraction
-- Iteratively retrieves all available pages from the API
-- Avoids partial datasets caused by single-call limits
+3. Executive Hospitality KPI & BI Modelling
+- Standardised hospitality KPIs including Occupancy Rate, ADR, RevPAR, and platform performance metrics
+- Developed interactive Tableau dashboards with dynamic metric selection, Top/Bottom ranking analysis, dual-axis visualisations, and occupancy heatmaps
+- Built business-ready gold marts specifically optimised for executive reporting and operational analysis
 
-👉 Guarantees completeness of ingested data
+👉 Enables data-driven pricing, occupancy, and revenue management decisions across the property portfolio
 
-4. Data Quality as a First-Class Step - Dedicated validation layer before downstream processing
-
-Includes:
-- Row count thresholds
-- Null checks on critical fields
-- Schema validation
-- Value range checks
-- Data freshness checks
-
-👉 Prevents bad data from propagating into analytics
-
-5. Observability & Monitoring
-- Structured JSON logging for queryable logs
-- CloudWatch metrics (e.g. API quota usage)
-- SNS alerts for failures
-
-👉 Enables fast debugging and proactive monitoring
 
 ---

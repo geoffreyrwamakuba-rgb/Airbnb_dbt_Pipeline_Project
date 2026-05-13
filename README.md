@@ -6,7 +6,7 @@ UrbanStay Management is a short-term rental property management company operatin
 Using Snowflake, dbt, AWS S3, Airflow, Docker, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
 
 ## Tableau Dashboard
-![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/a6725ad6a5d673be6f134c0c5019ed91dbabb54f/Images/AWS_Data_Flow.png)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/Tableau_Image.png)
 
 ## Project Overview
 
@@ -57,7 +57,7 @@ The absence of a centralised analytics platform limited the company’s ability 
 
 ### Data Flow Architecture
 
-![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/Data%20lineage.png)
 ---
 
 ### Key Insights and Recommendations
@@ -100,7 +100,7 @@ Given the consistently high occupancy rates, the data suggested there was likely
 
 ### dbt DAG
 
-![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/DBT%20DAG.png)
 ---
 
 ### 🚀 Key Features / Industry Best Practices

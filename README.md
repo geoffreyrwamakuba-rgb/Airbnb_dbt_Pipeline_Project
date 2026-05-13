@@ -60,7 +60,6 @@ The absence of a centralised analytics platform limited the company’s ability 
 ![ ](https://github.com/geoffreyrwamakuba-rgb/AWS_Youtube_Project/blob/4144f6a8b43428482cfd3e4ff1f74559755a1022/Images/stepfunctions_graph.svg)
 ---
 
-
 ### Key Insights and Recommendations
 
 ### Insight 1 – Revenue Dependence On Airbnb
@@ -75,8 +74,20 @@ Airbnb contributed approximately:
 This highlighted an overreliance on a single acquisition channeL
 
 ### Recommendation:
+I recommended that UrbanStay Management diversify booking acquisition strategies by:
+- Improving Booking.com listing optimisation
+- Improving listing quality and SEO across alternative platforms
+- Testing platform-specific promotional strategies.
 
-### Insight 2 – Instagram and TikTok are the strongest conversion drivers within Paid Social
+Reducing platform dependency would improve long-term revenue resilience and reduce exposure to marketplace algorithm or policy changes.
+
+### Insight 2 – Occupancy Increased While ADR and RevPAR Declined
+Portfolio occupancy increased to 95% month-over-month, while:
+- ADR declined by 9%
+- RevPAR declined by 7%.
+
+This suggested that occupancy growth was likely being maintained through pricing discounts rather than stronger pricing power.
+**The increase in occupancy was insufficient to offset declining average nightly pricing.**
 
 ### Recommendation:
 

@@ -1,0 +1,32 @@
+# INFO
+# PS C:\Users\geoff> git --version
+# git version 2.54.0.windows.1
+
+# PS C:\Users\geoff> py --version
+# Python 3.12.6
+
+# INSTALL UV 
+# python -m pip install uv
+# UV is an all in one tool for python -
+# uv init --> running this inside a folder, it prepares that folder to be a proper Python project.
+
+# 1. pyproject.toml: This file replaces requirements.txt. Stores project metadata + dependencies
+# 2. python-version: Small file with Python version
+# 3. hello.py: A simple "Hello World" script just to verify everything works.
+# 4. gitignore: A file telling Git to ignore your virtual environment and other junk files
+
+# fix python version
+# uv sync
+# uv add dbt-core
+
+# uv add dbt-snowflake
+# dbt init
+# ──────────────────────────────────────────────
+# Snowflake Configuration
+# ──────────────────────────────────────────────
+SNOWFLAKE_USER = "grsnowflake"
+SNOWFLAKE_PASSWORD = "Snowflakeproject26"
+SNOWFLAKE_ACCOUNT = "tg33617.eu-west-2.aws"  # Found under: Snowflake UI → session details
+# or maybe Account identifier --> VOOPREG-KI21045
+ROLE = "ACCOUNTADMIN"
+WAREHOUSE = "COMPUTE-WH"          

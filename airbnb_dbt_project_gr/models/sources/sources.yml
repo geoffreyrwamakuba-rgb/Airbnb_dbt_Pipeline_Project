@@ -1,0 +1,9 @@
+sources:
+  - name: staging
+    database: AIRBNB_GR 
+    schema: STAGING
+    tables:
+      - name: raw_bookings
+      - name: raw_property_daily
+      - name: raw_reviews
+      - name: dim_properties

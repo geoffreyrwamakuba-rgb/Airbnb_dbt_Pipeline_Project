@@ -1,0 +1,127 @@
+{{ config(materialized = 'table') }}
+
+-- You don't need to add semi colons in dbt it does this automatically
+
+---------------------
+-- DBT DDL structure
+---------------------
+
+-- dbt models only needs select
+-- This handle differences in DDL commands across Databricks, Snowflake, or Fabric
+-- You can decide whether dbt creates a View or a Table in multiple ways
+---> by chanGing the dbt_project.yml
+---> by adding a yml file for your specific model - this overwrides the project level yml
+---> Inline configuration --> This supersedes the model specific yml file (see above)
+-- SELECT * FROM AIRBNB.STAGING.LISTINGS LIMIT 10
+
+---------------------
+-- JINJA has different syntax to SQL
+-- You should update files.associations in settings.json for your workspace
+-- "*.sql": "jinja-sql",
+-- "*.yml": "jinja-yaml"
+---------------------
+
+---------------------
+-- SOURCES Files + syntax
+---------------------
+-- Enables lineage
+  
+---------------------
+-- Porperties file handles materiliazations at the model level in one file (bronze + silver + gold)
+-- BUT best practice is to manage from the parent dbt_project.yml, easier tracking
+---------------------
+
+--------------
+-- SCHEMA NAME 
+--------------
+-- You can also define the schema from the dbt_project.yml
+-- dbt uses a default macro called generate_schema_name to determine the name of the schema that a model should be built in.
+-- We can ajust this to change the default name and remove prefixes
+
+----------
+JINJA USES
+----------
+--> Always lowercase
+--> Create variables to use in conditions
+--> IF ELSE CONDITION
+--> For loops
+--> Incremental Load
+
+------------------------
+FULL SQL CODE --> target
+------------------------
+-- In the target folder there is complied and run
+-- Every time you compile or run a file is saved/ updated
+-- Compile has code with jinja templating filled in
+-- Run has templaing filled but also has the DDL that dbt is doing in the background
+
+------
+MACRO -- Functions in dbt
+------
+
+-------------------------
+METADATE DRIVEN PIPELINES
+-------------------------
+--> Using CONFIGURATIONS that we can change
+--> Goal is pipelines that scale without rewriting code every time a new source/table arrives
+Pros 
+--> Scalability with 1000s of tables
+--> Faster onboarding of new data sources
+--> Consistency in logging, quality checks and logic
+Cons 
+--> Can be difficult to debug
+--> Can grow complicated or be over engineered
+
+
+-------------------------
+ONE BIG TABLE --> OBT
+-------------------------
+--> denormalized tables, One analytics table
+
+-- We inatalled UV this is fast python package that creates virtual environments + manage python projects    
+-- Install dbt core
+-- Initialise Git – See fundamentals of git
+-- Install adaptor (connector) for snowflake
+-- Initialise dbt and confirm connection to snowflake – dbt debug
+------ In our profile.yml we have defined the schema as “dbt_schema”
+------ We can overwrite this for bronze + silver + gold
+-- dbt model is Modularized coding
+-- Add dbt power user extension in VSCode
+-- Compile code to catch any errors before running all the code (Very slow)
+
+-------------------------------------------------------------
+We can also have a gold layers here we chose 3 dim and 1 fact
+-------------------------------------------------------------
+
+---------------------------------
+SCD 2 in DBT ---> Uses Snapshots Mechanism
+---------------------------------
+--> SCD2 requires code that updates and inserts but is seen as boiler plate code
+
+
+----------------
+Ephemeral models -- these are like views (Stored queries but they are not created in the Database)
+- dbt keeps them in its code base
+- can help reduce clutter in the WH
+- you can't select directly from this model
+----------------
+-- We use an Ephemeral model for our snaphot
+-- 'dbt snapshot' to run ---> lead to real tables in Snowflake DB
+-- dbt build       # builds models, seeds, tests
+-- dbt snapshot    # run separately, on its own schedule
+-- Only if needed, 'dbt clean' will remove older queries that were stored in the target folder
+
+--------------------
+Data Quality Checks
+--------------------
+--> Dedicated folder for tests
+1. Singular Data Tests --> Write query that would catch errors
+--> sql file with text and yml file with description
+2. Generic Tests
+--> Uses a configuration / paramaters so you apply it across tables + columns
+
+We can set severity of Tests in the configuration
+1. error or warn (defualt is )
+dbt test
+
+

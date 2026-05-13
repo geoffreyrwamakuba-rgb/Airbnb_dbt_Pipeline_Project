@@ -1,0 +1,51 @@
+property_id,property_name,city,property_type,bedrooms,max_guests,owner_name,base_nightly_rate
+PROP001,Dawn Glens Apartment,London,House,2,5,Gail Singh,115
+PROP002,Billy Burg Apartment,London,Loft,1,2,Maria Turner,103
+PROP003,Shane Bridge Studio,Manchester,Apartment,5,5,Garry Parker,263
+PROP004,Josh Fields Loft,Manchester,Loft,5,6,Mohammed Taylor-Murphy,287
+PROP005,Giles Glens Apartment,Manchester,Loft,3,6,Brandon Evans-White,119
+PROP006,Brown Streets Studio,Birmingham,Apartment,1,8,Marie Kennedy,104
+PROP007,Lane Bridge House,Birmingham,House,1,9,Teresa Hicks,217
+PROP008,Green Neck Apartment,Liverpool,Apartment,5,6,Gary Begum-Sinclair,292
+PROP009,Thompson Trafficway House,Manchester,Apartment,1,5,Ruth Johnson,277
+PROP010,Sarah Skyway House,London,Studio,1,8,Abigail Glover-Butler,151
+PROP011,Ronald Views Loft,Birmingham,Studio,3,7,Frank Wilkins,133
+PROP012,Sam Lodge House,London,Studio,5,5,Miss Maureen Holmes,121
+PROP013,Ashley Islands Loft,Liverpool,House,5,5,Joseph Stanley,255
+PROP014,Eileen Springs House,London,Studio,1,7,Lydia Palmer-Powell,182
+PROP015,Neil Port House,London,Studio,5,7,Denis Noble,134
+PROP016,Catherine Crossing Loft,Liverpool,Loft,2,6,Mr Colin Birch,115
+PROP017,Katy Lane Studio,Birmingham,Loft,5,8,Alison Turner,172
+PROP018,Rogers Rue Studio,Manchester,Loft,1,2,Dr Stacey Crawford,300
+PROP019,Bryan Walks Apartment,Manchester,Studio,4,3,Miss Amy Randall,178
+PROP020,Harper Avenue Loft,Liverpool,House,5,2,Amelia Watson,254
+PROP021,Elliott Ferry Apartment,Birmingham,House,1,6,Leanne Smith,191
+PROP022,Allen Junction Studio,Liverpool,Apartment,3,10,Wayne James-Winter,275
+PROP023,Carter Manors Studio,London,House,5,5,Connor Rhodes,119
+PROP024,Janet Avenue House,Manchester,Apartment,5,7,Frederick O'Neill,205
+PROP025,Teresa Plains Apartment,London,House,3,5,Dr Joe Hicks,94
+PROP026,Colin Vista Studio,London,Apartment,4,3,Martin Hussain-Ball,274
+PROP027,Leanne Alley Studio,Manchester,Loft,5,4,Margaret Connor-Marsh,147
+PROP028,Melanie Route Loft,Manchester,Studio,3,8,Kevin Stephenson-Fisher,251
+PROP029,White Streets House,Liverpool,Loft,1,5,Simon Francis,137
+PROP030,Clark Freeway Apartment,Birmingham,Apartment,5,10,Mohammad Hughes,138
+PROP031,Diana Crossroad Studio,London,Apartment,1,5,Lynn Browne,97
+PROP032,Andrea Drive Apartment,Birmingham,Apartment,5,5,Rita Chandler,151
+PROP033,Derek Fords Loft,Manchester,Studio,5,9,Tom Knowles,142
+PROP034,Page Point Loft,Liverpool,Studio,1,3,Mrs Angela Marshall,248
+PROP035,Jack Point Loft,Birmingham,Loft,4,9,Lorraine Williams-Long,266
+PROP036,Elliott Forks Apartment,London,Apartment,4,7,Miss Jean Farrell,284
+PROP037,Sharp Port Apartment,Manchester,Studio,2,10,Dr Anne Parker,194
+PROP038,Reynolds Locks Studio,Liverpool,Studio,3,9,Michael Chambers,143
+PROP039,Williams Inlet Apartment,Liverpool,Apartment,1,10,Jayne Johnson-Arnold,294
+PROP040,Louis Glens Apartment,London,Studio,2,8,Martin Price,204
+PROP041,Evans Hills Loft,Manchester,Loft,1,4,Dr Caroline Birch,177
+PROP042,Davies Mount Apartment,Liverpool,House,4,6,Sandra Taylor-Taylor,188
+PROP043,Hudson Plains Loft,Manchester,Studio,3,5,Jacqueline Dunn,94
+PROP044,Christopher Valleys Apartment,Birmingham,Apartment,1,9,Max Evans,208
+PROP045,White Stream Studio,London,Apartment,2,3,Paul Murray,232
+PROP046,Walker Plains Apartment,Manchester,Loft,1,5,Jean Curtis,228
+PROP047,Robert Square Apartment,London,Loft,5,10,Dr Melissa Lamb,160
+PROP048,Sheppard Lodge House,Manchester,House,2,6,Lindsey Price,181
+PROP049,Charlie Shore Studio,Birmingham,Loft,3,3,Lynda Wood,82
+PROP050,James Views Loft,London,Apartment,5,5,Fiona Hope,209

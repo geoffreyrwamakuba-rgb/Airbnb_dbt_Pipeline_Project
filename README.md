@@ -85,6 +85,7 @@ Portfolio occupancy increased to 95% month-over-month, while:
 - RevPAR declined by 7%.
 
 This suggested that occupancy growth was likely being maintained through pricing discounts rather than stronger pricing power.
+
 **The increase in occupancy was insufficient to offset declining average nightly pricing.**
 
 ### Recommendation:

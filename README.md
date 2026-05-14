@@ -70,7 +70,7 @@ Airbnb contributed approximately:
 - £2.6M from Booking.com
 - £1.0M from Vrbo
 
-**This highlighted an overreliance on a single acquisition channeL**
+**This highlighted an overreliance on a single acquisition channel**
 
 ### Recommendation:
 I recommended that UrbanStay Management diversify booking acquisition strategies by:

@@ -74,7 +74,6 @@ Airbnb contributed approximately:
 
 ### Recommendation:
 I recommended that UrbanStay Management diversify booking acquisition strategies by:
-- Improving Booking.com listing optimisation
 - Improving listing quality and SEO across alternative platforms
 - Testing platform-specific promotional strategies.
 

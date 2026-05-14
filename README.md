@@ -101,29 +101,3 @@ Given the consistently high occupancy rates, the data suggested there was likely
 
 ![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/DBT%20DAG.png)
 ---
-
-### 🚀 Key Features / Industry Best Practices
-
-1. Modern Medallion Architecture
-- Implemented a Bronze → Silver → Gold warehouse design within Snowflake
-- Separated raw ingestion, cleaned transformations, and business-ready KPI marts
-- Built dedicated aggregate tables optimised for Tableau dashboard performance
-
-👉 Creates scalable, maintainable, and analytics-ready data models commonly used in modern data platforms
-
-2. Incremental dbt Modelling & Historical Tracking
-- Used incremental dbt models to efficiently process new booking and operational data
-- Implemented SCD Type 2 snapshot logic for historical dimension tracking
-- Designed reusable fact and dimension models for downstream analytics
-
-👉 Reduces warehouse compute costs while preserving historical business context and enabling scalable transformations
-
-3. Executive Hospitality KPI & BI Modelling
-- Standardised hospitality KPIs including Occupancy Rate, ADR, RevPAR, and platform performance metrics
-- Developed interactive Tableau dashboards with dynamic metric selection, Top/Bottom ranking analysis, dual-axis visualisations, and occupancy heatmaps
-- Built business-ready gold marts specifically optimised for executive reporting and operational analysis
-
-👉 Enables data-driven pricing, occupancy, and revenue management decisions across the property portfolio
-
-
----

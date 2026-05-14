@@ -25,7 +25,7 @@ The objective of this engagement was to build a scalable analytics platform capa
 
 The business needed visibility into questions such as:
 
-Which properties generate the highest RevPAR?
+- Which properties generate the highest RevPAR?
 - Are occupancy gains being driven by excessive discounting?
 - Which booking platforms drive the highest revenue?
 - How does seasonality impact occupancy and pricing performance?

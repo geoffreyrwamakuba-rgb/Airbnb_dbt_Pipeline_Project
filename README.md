@@ -6,8 +6,7 @@ UrbanStay Management is a short-term rental property management company operatin
 Using Snowflake, dbt, AWS S3, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
 
 ## Tableau Dashboard
-![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_dbt_Pipeline_Project/blob/49353dd5b09de78cc1bf1e7d25ef45eaceeb72a4/AIRBNB.png)
-
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_dbt_Pipeline_Project/blob/cc0b92d4a14256f23c3e75e3bb5e3a44275cd8c6/AIRBNB.png)
 ## Project Overview
 
 UrbanStay Management relied heavily on operational exports from multiple booking platforms to monitor business performance. Reporting processes were manual, inconsistent, and lacked standardised hospitality KPIs needed to support pricing and operational decisions.

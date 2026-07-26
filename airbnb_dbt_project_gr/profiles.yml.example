@@ -1,13 +1,13 @@
 airbnb_dbt_project_gr:
   outputs:
     dev:
-      account: VOOPREG-KI21045
+      account: <your_snowflake_account_locator>
       database: AIRBNB_GR
-      password: Snowflakeproject26
-      role: ACCOUNTADMIN
+      password: <your_password_or_use_env_var>
+      role: <a_scoped_role_not_accountadmin>
       schema: dbt_schema
       threads: 1
       type: snowflake
-      user: grsnowflake
+      user: <your_username>
       warehouse: COMPUTE_WH
   target: dev

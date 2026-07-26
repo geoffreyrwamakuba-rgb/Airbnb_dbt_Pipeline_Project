@@ -8,3 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Credentials - never commit real profiles.yml (Snowflake account/user/password live here)
+profiles.yml
+*_accessKeys.csv
+

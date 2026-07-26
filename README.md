@@ -1,12 +1,12 @@
-# Airbnb DBT Project
+# Airbnb - dbt Pipeline Project
 
 ## Executive Summary
 UrbanStay Management is a short-term rental property management company operating a portfolio of properties across Airbnb, Booking.com, and Vrbo. As the business scaled, leadership struggled with fragmented operational data, inconsistent KPI reporting, and limited visibility into portfolio performance across platforms and properties.
 
-Using Snowflake, dbt, AWS S3, Airflow, Docker, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
+Using Snowflake, dbt, AWS S3, and Tableau, I developed an end-to-end cloud analytics solution that transformed raw booking and operational data into business-ready KPI marts and interactive dashboards.
 
 ## Tableau Dashboard
-![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/Tableau_Image.png)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_dbt_Pipeline_Project/blob/ae7fe5077f3bfdd66c555360699f754c9c4feb38/AIRBNB.png)
 
 ## Project Overview
 
@@ -25,7 +25,7 @@ The objective of this engagement was to build a scalable analytics platform capa
 
 The business needed visibility into questions such as:
 
-Which properties generate the highest RevPAR?
+- Which properties generate the highest RevPAR?
 - Are occupancy gains being driven by excessive discounting?
 - Which booking platforms drive the highest revenue?
 - How does seasonality impact occupancy and pricing performance?
@@ -56,7 +56,7 @@ The absence of a centralised analytics platform limited the company’s ability 
 - Tableau dashboards for executive reporting and operational analysis
 
 ### Data Flow Architecture
-![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/285c275578d3c41c15f85debea5728bfbe25e8ad/Data%20lineage.png)
+![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/1c7272f71bfbc8cab6c61c19dc478be23c90df95/Data%20lineage.png)
 ---
 
 ### Key Insights and Recommendations
@@ -70,11 +70,10 @@ Airbnb contributed approximately:
 - £2.6M from Booking.com
 - £1.0M from Vrbo
 
-**This highlighted an overreliance on a single acquisition channeL**
+**This highlighted an overreliance on a single acquisition channel**
 
 ### Recommendation:
 I recommended that UrbanStay Management diversify booking acquisition strategies by:
-- Improving Booking.com listing optimisation
 - Improving listing quality and SEO across alternative platforms
 - Testing platform-specific promotional strategies.
 
@@ -86,6 +85,7 @@ Portfolio occupancy increased to 95% month-over-month, while:
 - RevPAR declined by 7%.
 
 This suggested that occupancy growth was likely being maintained through pricing discounts rather than stronger pricing power.
+
 **The increase in occupancy was insufficient to offset declining average nightly pricing.**
 
 ### Recommendation:
@@ -100,30 +100,4 @@ Given the consistently high occupancy rates, the data suggested there was likely
 ### dbt DAG
 
 ![ ](https://github.com/geoffreyrwamakuba-rgb/Airbnb_DBT_Project/blob/b5e9174d8fd73997d4edde7ee9be3172c396704e/DBT%20DAG.png)
----
-
-### 🚀 Key Features / Industry Best Practices
-
-1. Modern Medallion Architecture
-- Implemented a Bronze → Silver → Gold warehouse design within Snowflake
-- Separated raw ingestion, cleaned transformations, and business-ready KPI marts
-- Built dedicated aggregate tables optimised for Tableau dashboard performance
-
-👉 Creates scalable, maintainable, and analytics-ready data models commonly used in modern data platforms
-
-2. Incremental dbt Modelling & Historical Tracking
-- Used incremental dbt models to efficiently process new booking and operational data
-- Implemented SCD Type 2 snapshot logic for historical dimension tracking
-- Designed reusable fact and dimension models for downstream analytics
-
-👉 Reduces warehouse compute costs while preserving historical business context and enabling scalable transformations
-
-3. Executive Hospitality KPI & BI Modelling
-- Standardised hospitality KPIs including Occupancy Rate, ADR, RevPAR, and platform performance metrics
-- Developed interactive Tableau dashboards with dynamic metric selection, Top/Bottom ranking analysis, dual-axis visualisations, and occupancy heatmaps
-- Built business-ready gold marts specifically optimised for executive reporting and operational analysis
-
-👉 Enables data-driven pricing, occupancy, and revenue management decisions across the property portfolio
-
-
 ---
